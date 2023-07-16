@@ -6,7 +6,7 @@ function Projects() {
     const Projects = ProjectsList
   return (
     <div>
-        <h2>PROJECTS</h2>
+        <h2 className='mb-8 lg:hidden'>PROJECTS</h2>
         <div>
             {
                 Projects.map(project => {

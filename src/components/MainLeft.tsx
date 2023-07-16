@@ -17,10 +17,10 @@ function MainLeft() {
       </div>
 
       <div className='text-2xl flex mt-10'>
-        <a href="https://github.com/adetomiwa-esq" className='block mr-4'><AiOutlineGithub /></a>
-        <a href="https://instagram.com/adetomiwa_akin?r=nametag" className='block mr-4'><FiInstagram /></a>
-        <a href="https://twitter.com/Adetomiwa_akin" className='block mr-4'><ImTwitter /></a>
-        <a href="https://www.linkedin.com/in/kehinde-akinola-b32aa0229/" className='block mr-4'><ImLinkedin /></a>
+        <a href="https://github.com/adetomiwa-esq" className='block mr-4 hover:text-slate-200'><AiOutlineGithub /></a>
+        <a href="https://instagram.com/adetomiwa_akin?r=nametag" className='block mr-4 hover:text-slate-200'><FiInstagram /></a>
+        <a href="https://twitter.com/Adetomiwa_akin" className='block mr-4 hover:text-slate-200'><ImTwitter /></a>
+        <a href="https://www.linkedin.com/in/kehinde-akinola-b32aa0229/" className='block mr-4 hover:text-slate-200'><ImLinkedin /></a>
       </div>
     </section>
   )
