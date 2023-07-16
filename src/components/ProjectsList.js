@@ -2,13 +2,14 @@ import Xeleron from './../images/xeleron.png';
 import Musicanny from './../images/musicanny.png';
 import Artsy from './../images/artsy.png';
 import Realty from './../images/realty.png';
+import Detail from './../images/detail.png';
 
 export const ProjectsList = [
     {
         imgSrc: Xeleron,
         name: 'Xeleron dApp',
         description: 'Xeleron is a decentralized application that offers various products such as the ability to pool tokens, swap, farm, stake and launch tokens. I had the opportunity to work along side a team of brilliant developers to bring this project to fruition. And the technologies personally employed by me are listed below.',
-        url: '',
+        url: 'https://xelerondeployment.vercel.app',
         technologies: ['React', 'Redux-toolkit', 'Tailwind-css']
     },
 
@@ -17,6 +18,14 @@ export const ProjectsList = [
         name: 'Musicanny',
         description: 'I am currently working on this music web application which is to be pitched in the coming weeks to induce investment. The goal is to create a music web application on par with every other top music application',
         url: 'https://musicanny.netlify.app',
+        technologies: ['React', 'Redux-toolkit', 'Tailwind-css', 'Typescript']
+    },
+
+    {
+        imgSrc: Detail,
+        name: 'Ade-s Detail',
+        description: "This is an auto detailing website to promote the business of cleaning, restoring and removing contaminants from a vehicle's interior.",
+        url: 'https://ade-details.netlify.app',
         technologies: ['React', 'Redux-toolkit', 'Tailwind-css', 'Typescript']
     },
 
