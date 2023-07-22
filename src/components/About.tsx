@@ -1,11 +1,37 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Mypic from './../images/profile-img.jpg';
 import { techs } from './techs';
 
 function About() {
+  const [top, setTop] = useState<number|undefined>(0)
+  const [bottom, setBottom] = useState<number|undefined>(0)
+
+  useEffect(() => {
+    const marker = document.querySelector('#about-marker')
+    const about = document.querySelector('#about')
+    const currentTop = about?.getBoundingClientRect().y
+    const currentBottom = marker?.getBoundingClientRect().y
+    setTop(Number(currentTop) - 50)
+    setBottom(Number(currentBottom) - 80)
+  }, [])
+
+  
+  const [active, setActive] = useState(false)
+
+  function fixAboutHeader(){
+    if(window.scrollY >= Number(top) && window.scrollY < Number(bottom)){
+      setActive(true)
+    }
+    else {
+      setActive(false)
+    }
+  }
+
+  window.addEventListener('scroll', fixAboutHeader)
   return (
-    <div className='mb-24'>
-      <h3 className='lg:hidden'>ABOUT</h3>
+    <div  className=''>
+      <h3 className= {`lg:hidden top-0 left-0 w-full py-3 bg-slate-900 transition-all delay-[200ms] ease-in-out ${active ? "sticky left-0 top-0" : "static"}`}>ABOUT</h3>
+      <div id="about" className=''></div>
       <h3 className='text-slate-200 hidden lg:block'>MEET AKINOLA KEHINDE:</h3>
       <div className='w-[180px] h-[180px] rounded-full m-auto overflow-hidden my-7'>
         <img src={Mypic} alt="my-pic" className='' />
@@ -25,6 +51,7 @@ function About() {
             })
           }
         </div>
+        <div id='about-marker' className='mt-24'></div>
     </div>
   )
 }
