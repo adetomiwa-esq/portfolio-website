@@ -18,7 +18,7 @@ function About({setPortfolioSection} : Props) {
     setTop(Number(currentTop) - 50)
     setBottom(Number(currentBottom) - 80)
     setPortfolioSection(Number(currentBottom) - 300)
-  }, [])
+  }, [setPortfolioSection])
 
   const [active, setActive] = useState(false)
 
