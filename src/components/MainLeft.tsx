@@ -13,7 +13,6 @@ function MainLeft({portfolioSection} : Props) {
   function fixAboutHeader(){
     if(window.scrollY <= Number(portfolioSection)){
       setAbout(true)
-      console.log('outside')
     }
     else if(window.scrollY >= Number(portfolioSection)) {
       setAbout(false)

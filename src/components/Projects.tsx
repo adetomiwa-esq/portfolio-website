@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { ProjectsList } from './ProjectsList';
 import { BsArrowUpRight } from 'react-icons/bs'
+import 'aos/dist/aos.css';
+import * as AOS from 'aos';
 
 function Projects() {
 
@@ -15,6 +17,10 @@ function Projects() {
     setTop(Number(currentTop) + 7)
     // setBottom(Number(currentBottom) - 75)
   }, [])
+
+  useEffect(() => {
+    AOS.init({duration: 2000})
+  })
 
   
   const [active, setActive] = useState(false)
@@ -36,14 +42,16 @@ function Projects() {
         <div className='mb-8'>
             <div className='h-[48px]'>
                 <div id="header"></div>
-                <h2 className={`lg:hidden py-3 w-full bg-slate-900 z-20 transition-all delay-[200ms] ease-in-out lg:static ${active ? "fixed left-0 top-0 pl-4" : "static"}`}>PROJECTS</h2>
+                <h2 className={`lg:hidden py-3 w-full bg-slate-900 z-20 transition-all delay-[200ms] ease-in-out lg:static ${active ? "sticky left-0 top-0 pl-4" : "static"}`}>PROJECTS</h2>
             </div>
         </div>
         <div>
             {
                 Projects.map((project, index) => {
-                    return <div key={index} className='mb-14 flex flex-col-reverse sm:flex-row'>
-                        <img src={project.imgSrc} alt="project-img" className='w-[200px] h-[120px] lg:w-[100px] lg:h-[60px] sm:mr-6 mt-6 sm:mt-0' />
+                    return <div key={index} className='mb-14 flex flex-col-reverse sm:flex-row' data-aos="slide-left">
+                        <a href={project.url} className='inline-block w-[200px] h-[120px] min-w-[200px] min-h-[120px] lg:w-[100px] lg:min-w-[100px] lg:h-[60px] lg:min-h-[60px] sm:mr-6 mt-6 sm:mt-0 border border-red-500'>
+                          <img src={project.imgSrc} alt="project-img" className='w-full h-full'/>
+                        </a>
                         <div>
                             <a href={project.url} className='text-slate-200 mb-2 flex items-center group hover:text-teal-200 w-fit'>{project.name} <i className='group-hover:mt-[-4px] text-[12px] ml-2'><BsArrowUpRight /></i></a>
                             <p className='text-[14px]'>{project.description}</p>

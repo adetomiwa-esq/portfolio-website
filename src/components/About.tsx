@@ -25,6 +25,7 @@ function About({setPortfolioSection} : Props) {
   function fixAboutHeader(){
     if(window.scrollY >= Number(top) && window.scrollY < Number(bottom)){
       setActive(true)
+      console.log('hello')
     }
     else {
       setActive(false)
