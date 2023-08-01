@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { Dispatch, useEffect, useState } from 'react'
 import Mypic from './../images/profile-img.jpg';
 import { techs } from './techs';
 
-function About() {
+type Props = {
+  setPortfolioSection: Dispatch<React.SetStateAction<number|undefined>>
+}
+
+function About({setPortfolioSection} : Props) {
   const [top, setTop] = useState<number|undefined>(0)
   const [bottom, setBottom] = useState<number|undefined>(0)
 
@@ -13,9 +17,9 @@ function About() {
     const currentBottom = marker?.getBoundingClientRect().y
     setTop(Number(currentTop) - 50)
     setBottom(Number(currentBottom) - 80)
+    setPortfolioSection(Number(currentBottom) - 300)
   }, [])
 
-  
   const [active, setActive] = useState(false)
 
   function fixAboutHeader(){
