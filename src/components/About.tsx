@@ -25,7 +25,6 @@ function About({setPortfolioSection} : Props) {
   function fixAboutHeader(){
     if(window.scrollY >= Number(top) && window.scrollY < Number(bottom)){
       setActive(true)
-      console.log('hello')
     }
     else {
       setActive(false)
@@ -35,7 +34,9 @@ function About({setPortfolioSection} : Props) {
   window.addEventListener('scroll', fixAboutHeader)
   return (
     <div  className=''>
-      <h3 className= {`lg:hidden top-0 left-0 w-full py-3 bg-slate-900 transition-all delay-[200ms] ease-in-out ${active ? "sticky left-0 top-0" : "static"}`}>ABOUT</h3>
+      <div className="h-[50px]">
+        <h3 className= {`lg:hidden top-0 left-0 w-full py-3 bg-slate-900 transition-all delay-[200ms] ease-in-out ${active ? "fixed left-0 top-0 pl-4" : "static"}`}>ABOUT</h3>
+      </div>
       <div id="about" className=''></div>
       <h3 className='text-slate-200 hidden lg:block'>MEET AKINOLA KEHINDE:</h3>
       <div className='w-[180px] h-[180px] rounded-full m-auto overflow-hidden my-7'>

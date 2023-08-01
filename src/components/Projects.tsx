@@ -42,14 +42,14 @@ function Projects() {
         <div className='mb-8'>
             <div className='h-[48px]'>
                 <div id="header"></div>
-                <h2 className={`lg:hidden py-3 w-full bg-slate-900 z-20 transition-all delay-[200ms] ease-in-out lg:static ${active ? "sticky left-0 top-0 pl-4" : "static"}`}>PROJECTS</h2>
+                <h2 className={`lg:hidden py-3 w-full bg-slate-900 z-20 transition-all delay-[200ms] ease-in-out lg:static ${active ? "fixed left-0 top-0 pl-4" : "static"}`}>PROJECTS</h2>
             </div>
         </div>
         <div>
             {
                 Projects.map((project, index) => {
                     return <div key={index} className='mb-14 flex flex-col-reverse sm:flex-row' data-aos="slide-left">
-                        <a href={project.url} className='inline-block w-[200px] h-[120px] min-w-[200px] min-h-[120px] lg:w-[100px] lg:min-w-[100px] lg:h-[60px] lg:min-h-[60px] sm:mr-6 mt-6 sm:mt-0 border border-red-500'>
+                        <a href={project.url} className='inline-block w-[200px] h-[120px] min-w-[200px] min-h-[120px] lg:w-[100px] lg:min-w-[100px] lg:h-[60px] lg:min-h-[60px] sm:mr-6 mt-6 sm:mt-0'>
                           <img src={project.imgSrc} alt="project-img" className='w-full h-full'/>
                         </a>
                         <div>
