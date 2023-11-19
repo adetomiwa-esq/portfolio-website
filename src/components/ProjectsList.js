@@ -3,8 +3,18 @@ import Musicanny from './../images/musicanny.png';
 import Artsy from './../images/artsy.png';
 import Realty from './../images/realty.png';
 import Detail from './../images/detail.png';
+import Atafrica from './../images/atafrica.png';
 
 export const ProjectsList = [
+    {
+        imgSrc: Atafrica,
+        name: 'Atafrica',
+        description: `Atafrica is a simple landing page of a roboadvisor created to advise various users on how to make te most of their money by saving or investing it. It also contains a portfolio section for selecting risk tolerance.`,
+        api: 'API - https://atafrica.onrender.com/api/v1/get_stocks',
+        url: 'https://robo-advisor.netlify.app',
+        technologies: ['React', 'Tailwind-css', 'MongoDB', 'Node-js/express']
+    },
+
     {
         imgSrc: Xeleron,
         name: 'Xeleron dApp',

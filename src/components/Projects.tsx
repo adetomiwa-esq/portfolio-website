@@ -54,7 +54,10 @@ function Projects() {
                         </a>
                         <div>
                             <a href={project.url} className='text-slate-200 mb-2 flex items-center group hover:text-teal-200 w-fit'>{project.name} <i className='group-hover:mt-[-4px] text-[12px] ml-2'><BsArrowUpRight /></i></a>
-                            <p className='text-[14px]'>{project.description}</p>
+                            <p className='text-[14px]'>
+                              {project.description}
+                            </p>
+                            <p><a href='https://atafrica.onrender.com/api/v1/get_stocks'>{project.api ? project.api : ''}</a></p>
                             <div className='flex flex-wrap mt-2'>
                                 {
                                     project.technologies.map((tech, index) => {
